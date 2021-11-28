@@ -1,15 +1,17 @@
 ﻿@if (product != null)
 {
     <tr>
-        <td>@product.Id</td>
+        <NavLink class="nav-link" href="@($"product/{product.Id}")">
+            <td>@product.Id</td>
+        </NavLink>
         <td>@product.Name</td>
         <td>@product.Brand</td>
         <td>@product.Price</td>
-        <td>@product.Description</td>
+
     </tr>
 }
 
 @code {
     [Parameter]
-    public Product product{ get; set; }
+    public Product product { get; set; }
 }

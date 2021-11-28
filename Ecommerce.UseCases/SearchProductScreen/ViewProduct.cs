@@ -15,14 +15,9 @@ namespace Ecommerce.UseCases.SearchProductScreen
             this.productRepository = productRepository;
         }
 
-        public Product Execute(int id)
-        {
-            return productRepository.GetProduct(id);
-        }
-
         public Product Execute(int? id)
         {
-            throw new NotImplementedException();
-        }
+            return productRepository.GetProduct(id);
+        }    
     }
 }
