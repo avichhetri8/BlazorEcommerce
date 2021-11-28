@@ -1,11 +1,10 @@
-﻿<h3>SearchBarComponent</h3>
-
-<div>Search : <input type="text" @bind-value="filter"/>
-    <button @onclick="HandleSearch" > Filter</button>
-
+﻿<div class="input-group mb-3">
+  <input type="text" class="form-control" placeholder="Filter" @bind-value="filter">
+  <div class="input-group-append">
+    <button class="btn btn-outline-secondary" type="button" @onclick="HandleSearch">Filter</button>
+  </div>
 </div>
 
-    @filter
 
 @code{
     private string filter;

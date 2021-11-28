@@ -5,14 +5,32 @@
 <h3>SearchProductComponent</h3>
 <SearchBarComponent OnSearch="HandleSearch" />
 
-<ul>
-    @{
-        foreach (var product in products)
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Brand</th>
+            <th>Price</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (products != null && products.Count() > 0)
         {
-            <li> @product.Name</li>
+            @foreach (var product in products)
+            {
+                <ProductItemComponent product="product"/>
+            }
         }
-    }
-</ul>
+        else
+        {
+            <tr>
+                <td colspan="5">No Record Found</td>
+            </tr>
+        }
+    </tbody>
+</table>
 
 @code {
     private IEnumerable<Product> products;
