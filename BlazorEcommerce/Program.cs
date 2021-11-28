@@ -1,4 +1,7 @@
 using BlazorEcommerce.Data;
+using Ecommerce.DataSore.HardCoded;
+using Ecommerce.UseCases.PluginInterfaces.DataStore;
+using Ecommerce.UseCases.SearchProductScreen;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 
@@ -8,6 +11,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddSingleton<WeatherForecastService>();
+builder.Services.AddTransient<ISearchProduct, SearchProduct>();
+builder.Services.AddTransient<IViewProduct, ViewProduct>();
+builder.Services.AddTransient<IProductRepository, ProductRepository>();
 
 var app = builder.Build();
 

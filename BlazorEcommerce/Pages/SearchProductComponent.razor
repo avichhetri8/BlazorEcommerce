@@ -1,0 +1,23 @@
+﻿@page "/product"
+
+@inject ISearchProduct _searchProduct
+
+<h3>SearchProductComponent</h3>
+<SearchBarComponent OnSearch="HandleSearch"/>
+
+@code {
+    private IEnumerable<Product> products;
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        products =  _searchProduct.Execute();
+    }
+
+    private void HandleSearch(string filter)
+    {
+        products =  _searchProduct.Execute(filter);
+       
+    }
+
+}
