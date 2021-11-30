@@ -8,12 +8,28 @@ Welcome to your new app.
 
 <SurveyPrompt Title="How is Blazor working for you?" />
 
-<input type="radio" value="1" name="group"  @onclick="@(()=> selectedGroup=1)" checked="@(selectedGroup == 1)" /> male
-<input type="radio" value="2" name="group" @onclick="@(()=> selectedGroup=2)" checked="@(selectedGroup == 2)"/> female
+<input type="radio" value="1" name="group" @onclick="@(()=> selectedGroup=1)" checked="@(selectedGroup == 1)" /> male
+<input type="radio" value="2" name="group" @onclick="@(()=> selectedGroup=2)" checked="@(selectedGroup == 2)" /> female
+<VisibiltyComponent @ref="VisibiltyComponent"/>
 
+<button @onclick="Toggle">Toggle</button>
 <br />
-@selectedGroup
+
+<TemplatedComponent>
+    <Header>
+        Hello 
+    </Header>
+    <Footer>
+        World
+    </Footer>
+</TemplatedComponent>
 
 @code {
+    private VisibiltyComponent VisibiltyComponent;
     private int selectedGroup { get; set; } = 2;
+
+    void Toggle()
+    {
+        this.VisibiltyComponent.SetVisibility();
+    }
 }

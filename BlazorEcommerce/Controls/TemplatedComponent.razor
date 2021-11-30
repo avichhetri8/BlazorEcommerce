@@ -1,0 +1,14 @@
+﻿<h3>TemplatedComponent</h3>
+
+@Header
+This is the Blazor Course
+@Footer
+
+@code {
+
+    [Parameter]
+    public RenderFragment Header{ get; set; }
+    [Parameter]
+    public RenderFragment Footer{ get; set; }
+
+}
