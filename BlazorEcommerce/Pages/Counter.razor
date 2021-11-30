@@ -5,6 +5,9 @@
 <h1>Counter</h1>
 
 <p role="status">Current count: @currentCount</p>
+<CascadingValue Name="Counter" Value="@currentCount" >
+    <DemoComponent />
+</CascadingValue>
 
 <button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
 

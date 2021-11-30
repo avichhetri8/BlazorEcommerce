@@ -5,11 +5,11 @@ VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorEcommerce", "BlazorEcommerce\BlazorEcommerce.csproj", "{831CBEAB-D4B6-4625-8156-D49EFE6F7D5F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecommerce.CoreBusiness", "Ecommerce.CoreBusiness\Ecommerce.CoreBusiness.csproj", "{2A03BD7F-90A0-4188-9F8B-F186F9530960}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ecommerce.CoreBusiness", "Ecommerce.CoreBusiness\Ecommerce.CoreBusiness.csproj", "{2A03BD7F-90A0-4188-9F8B-F186F9530960}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecommerce.DataSore.HardCoded", "Ecommerce.DataSore.HardCoded\Ecommerce.DataSore.HardCoded.csproj", "{87BE529D-B72D-42C4-8A13-10A3E499E8BF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ecommerce.DataSore.HardCoded", "Ecommerce.DataSore.HardCoded\Ecommerce.DataSore.HardCoded.csproj", "{87BE529D-B72D-42C4-8A13-10A3E499E8BF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecommerce.UseCases", "Ecommerce.UseCases\Ecommerce.UseCases.csproj", "{B0C62C5E-AEC3-416B-8160-8CB849773233}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ecommerce.UseCases", "Ecommerce.UseCases\Ecommerce.UseCases.csproj", "{B0C62C5E-AEC3-416B-8160-8CB849773233}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
